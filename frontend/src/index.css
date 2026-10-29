@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ink text-paper antialiased;
+    font-feature-settings: 'ss01' on;
+  }
+
+  ::selection {
+    @apply bg-signal/30 text-paper;
+  }
+
+  /* Visible keyboard focus everywhere, never removed */
+  :focus-visible {
+    outline: 2px solid theme('colors.signal.DEFAULT');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.line') transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: theme('colors.line');
+    border-radius: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Light theme overrides. Scoped by ancestor selector rather than a full
+   Tailwind CSS-variable refactor (out of scope for this pass) — covers the
+   surface/text/border tokens that matter for readability; accent colors
+   (signal/amber/danger) stay the same saturation in both themes since they
+   read fine on either background. `html.theme-light .bg-ink` has higher
+   specificity than the plain `.bg-ink` utility, so no !important needed. */
+html.theme-light {
+  color-scheme: light;
+}
+html.theme-light .bg-ink { background-color: #F5F4EF; }
+html.theme-light .bg-surface { background-color: #FFFFFF; }
+html.theme-light .bg-surface-alt { background-color: #F0EFE9; }
+html.theme-light .bg-surface-hi,
+html.theme-light .bg-surface-hi\/90,
+html.theme-light .bg-surface-hi\/95 { background-color: #E8E7DF; }
+html.theme-light .text-paper { color: #161B1E; }
+html.theme-light .text-muted { color: #6B7680; }
+html.theme-light .border-line { border-color: #DEDCD3; }
+html.theme-light .bg-signal-dim { background-color: #D8F3E8; }
+html.theme-light .bg-danger-dim { background-color: #FBE2E0; }
+html.theme-light .bg-amber-dim { background-color: #FBEBD3; }
+html.theme-light ::selection { background-color: rgba(73, 214, 172, 0.25); }
+html.theme-light body { background-color: #F5F4EF; color: #161B1E; }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1976d2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#42a5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9c27b0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7b1fa2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circles -->
+  <circle cx="100" cy="100" r="95" fill="url(#logoGrad)" opacity="0.1"/>
+  <circle cx="100" cy="100" r="75" fill="url(#logoGrad)" opacity="0.15"/>
+
+  <!-- Chat bubble -->
+  <g transform="translate(45, 35)">
+    <rect x="0" y="0" width="110" height="85" rx="18" fill="white" opacity="0.95" stroke="#1976d2" stroke-width="2"/>
+    <path d="M15 85 L30 100 L45 85" fill="white" stroke="#1976d2" stroke-width="2"/>
+    <rect x="15" y="15" width="55" height="8" rx="4" fill="#1976d2" opacity="0.8"/>
+    <rect x="15" y="35" width="75" height="8" rx="4" fill="#1976d2" opacity="0.6"/>
+    <rect x="15" y="55" width="45" height="8" rx="4" fill="#1976d2" opacity="0.4"/>
+  </g>
+
+  <!-- Lock icon (security) -->
+  <g transform="translate(140, 50)">
+    <rect x="0" y="12" width="24" height="20" rx="4" fill="#1976d2"/>
+    <path d="M6 12 V7 C6 3 8.5 1 12 1 C15.5 1 18 3 18 7 V12" stroke="#1976d2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="12" cy="18" r="3" fill="white"/>
+    <rect x="10.5" y="21" width="3" height="5" fill="white" rx="1"/>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="170" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#1976d2" letter-spacing="1">
+    SECURE CHAT
+  </text>
+</svg>

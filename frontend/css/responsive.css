@@ -1,0 +1,947 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* ============================================
+   LARGE DESKTOPS (1200px and above)
+   ============================================ */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}
+
+/* ============================================
+   DESKTOPS & LAPTOPS (992px - 1199px)
+   ============================================ */
+@media (max-width: 1199px) {
+    .chat-layout {
+        border-radius: var(--radius);
+    }
+    
+    .chat-list-panel {
+        width: 280px;
+        min-width: 280px;
+    }
+}
+
+/* ============================================
+   TABLETS & SMALL LAPTOPS (768px - 991px)
+   ============================================ */
+@media (max-width: 991px) {
+    /* ===== General ===== */
+    .view {
+        padding: 16px;
+    }
+    
+    /* ===== Chat ===== */
+    .chat-list-panel {
+        width: 260px;
+        min-width: 260px;
+    }
+    
+    /* ===== Profile ===== */
+    .profile-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* ===== Friends ===== */
+    .friend-card {
+        flex-wrap: wrap;
+    }
+    
+    .friend-card .friend-actions {
+        margin-left: auto;
+    }
+    
+    /* ===== Groups ===== */
+    .group-card {
+        flex-wrap: wrap;
+    }
+    
+    /* ===== Notifications ===== */
+    .notification-item {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============================================
+   MOBILE DEVICES (576px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    /* ===== Sidebar ===== */
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: var(--z-fixed);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        width: 280px;
+        min-width: 280px;
+        box-shadow: var(--shadow-xl);
+    }
+    
+    #sidebar.open {
+        transform: translateX(0);
+    }
+    
+    #sidebar-close {
+        display: block !important;
+    }
+    
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: calc(var(--z-fixed) - 1);
+        animation: fadeIn 0.3s ease;
+    }
+    
+    /* ===== Main Content ===== */
+    #main-content {
+        width: 100%;
+    }
+    
+    /* ===== Chat Layout ===== */
+    .chat-layout {
+        flex-direction: column;
+        border-radius: 0;
+        height: 100%;
+        min-height: 100vh;
+    }
+    
+    .chat-list-panel {
+        width: 100%;
+        min-width: unset;
+        max-height: 200px;
+        border-right: none;
+        border-bottom: 1px solid var(--divider);
+    }
+    
+    .chat-list-header {
+        padding: 12px 16px;
+    }
+    
+    .chat-list-header h3 {
+        font-size: 16px;
+    }
+    
+    .chat-list {
+        max-height: 150px;
+    }
+    
+    .chat-list-item {
+        padding: 8px 12px;
+    }
+    
+    .chat-list-item .chat-avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .chat-list-item .chat-name {
+        font-size: 14px;
+    }
+    
+    .chat-list-item .chat-last-msg {
+        font-size: 12px;
+    }
+    
+    .chat-window-panel {
+        flex: 1;
+        min-height: 0;
+        height: calc(100vh - 200px);
+    }
+    
+    .mobile-back {
+        display: block !important;
+    }
+    
+    .chat-header {
+        padding: 10px 12px;
+    }
+    
+    .chat-header-info h4 {
+        font-size: 15px;
+    }
+    
+    .chat-header-info p {
+        font-size: 12px;
+    }
+    
+    .chat-messages {
+        padding: 12px;
+    }
+    
+    .message {
+        max-width: 85%;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .message .msg-meta {
+        font-size: 10px;
+    }
+    
+    .chat-input-area {
+        padding: 8px 12px;
+        gap: 6px;
+    }
+    
+    .chat-input-area .input-btn img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    #message-input {
+        font-size: 14px;
+        padding: 6px 12px;
+        min-height: 36px;
+    }
+    
+    .send-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .send-btn img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* ===== Auth ===== */
+    .auth-container {
+        padding: 24px;
+        margin: 16px;
+    }
+    
+    .auth-logo img {
+        height: 50px;
+    }
+    
+    .auth-logo h1 {
+        font-size: 20px;
+    }
+    
+    .auth-form {
+        gap: 14px;
+    }
+    
+    .form-group input {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    /* ===== Profile ===== */
+    .profile-content {
+        padding: 16px;
+    }
+    
+    .profile-avatar-section img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-info-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .profile-info-item p {
+        font-size: 15px;
+    }
+    
+    .profile-actions {
+        flex-direction: column;
+    }
+    
+    .profile-actions .btn-primary,
+    .profile-actions .btn-secondary,
+    .profile-actions .btn-danger {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    /* ===== Friends ===== */
+    .friends-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .friends-header h2 {
+        font-size: 20px;
+    }
+    
+    .friends-tabs {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .tab-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+        flex: 1;
+        text-align: center;
+        min-width: 60px;
+    }
+    
+    .friend-card {
+        padding: 10px 12px;
+    }
+    
+    .friend-card img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .friend-card .friend-name {
+        font-size: 14px;
+    }
+    
+    .friend-card .friend-username {
+        font-size: 12px;
+    }
+    
+    .friend-request-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .friend-request-card .request-info img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .friend-request-card .request-actions {
+        justify-content: flex-end;
+    }
+    
+    /* ===== Groups ===== */
+    .groups-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .groups-header h2 {
+        font-size: 20px;
+    }
+    
+    .group-card {
+        padding: 10px 12px;
+    }
+    
+    .group-card img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .group-card .group-name {
+        font-size: 14px;
+    }
+    
+    /* ===== Notifications ===== */
+    .notifications-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .notifications-header h2 {
+        font-size: 20px;
+    }
+    
+    .notification-item {
+        padding: 10px 12px;
+    }
+    
+    .notification-item .notif-icon {
+        font-size: 20px;
+    }
+    
+    .notification-item .notif-message {
+        font-size: 13px;
+    }
+    
+    /* ===== Settings ===== */
+    .settings-section {
+        padding: 16px;
+    }
+    
+    .settings-section h3 {
+        font-size: 16px;
+    }
+    
+    .settings-item {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    
+    .settings-item .settings-item-label {
+        font-size: 14px;
+    }
+    
+    .settings-item .settings-item-desc {
+        font-size: 12px;
+    }
+    
+    /* ===== Modal ===== */
+    .modal-content {
+        padding: 16px;
+        margin: 8px;
+        max-width: 100%;
+    }
+    
+    .modal-header h3 {
+        font-size: 18px;
+    }
+    
+    /* ===== Emoji Picker ===== */
+    .emoji-picker {
+        max-width: 260px;
+        padding: 8px;
+    }
+    
+    .emoji-grid {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 3px;
+    }
+    
+    .emoji-grid button {
+        font-size: 20px;
+        padding: 3px;
+    }
+    
+    /* ===== Toast ===== */
+    .toast {
+        font-size: 13px;
+        padding: 10px 20px;
+        max-width: 95%;
+    }
+}
+
+/* ============================================
+   SMALL PHONES (480px and below)
+   ============================================ */
+@media (max-width: 480px) {
+    /* ===== General ===== */
+    .view {
+        padding: 8px;
+    }
+    
+    /* ===== Auth ===== */
+    .auth-container {
+        padding: 16px;
+        margin: 8px;
+        border-radius: var(--radius);
+    }
+    
+    .auth-logo h1 {
+        font-size: 18px;
+    }
+    
+    .auth-logo p {
+        font-size: 13px;
+    }
+    
+    .auth-form {
+        gap: 12px;
+    }
+    
+    .form-group label {
+        font-size: 13px;
+    }
+    
+    .form-group input {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    .form-options {
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .auth-links {
+        font-size: 13px;
+    }
+    
+    .btn-primary {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    /* ===== Sidebar ===== */
+    #sidebar {
+        width: 260px;
+        min-width: 260px;
+    }
+    
+    .sidebar-header {
+        padding: 12px 16px;
+    }
+    
+    .sidebar-brand {
+        font-size: 16px;
+    }
+    
+    .sidebar-brand img {
+        height: 28px;
+    }
+    
+    .sidebar-profile {
+        padding: 12px 16px;
+    }
+    
+    .sidebar-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .sidebar-user-info h4 {
+        font-size: 14px;
+    }
+    
+    .nav-item {
+        padding: 8px 16px;
+    }
+    
+    .nav-icon {
+        font-size: 16px;
+        width: 20px;
+    }
+    
+    .nav-item span:not(.nav-icon):not(.nav-badge) {
+        font-size: 13px;
+    }
+    
+    /* ===== Chat ===== */
+    .chat-list-panel {
+        max-height: 160px;
+    }
+    
+    .chat-list {
+        max-height: 120px;
+    }
+    
+    .chat-list-item {
+        padding: 6px 10px;
+    }
+    
+    .chat-list-item .chat-avatar {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .chat-list-item .chat-name {
+        font-size: 13px;
+    }
+    
+    .chat-window-panel {
+        height: calc(100vh - 160px);
+    }
+    
+    .chat-header {
+        padding: 8px 10px;
+    }
+    
+    .chat-header-info img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .chat-header-info h4 {
+        font-size: 14px;
+    }
+    
+    .chat-header-info p {
+        font-size: 11px;
+    }
+    
+    .chat-messages {
+        padding: 8px 10px;
+        gap: 4px;
+    }
+    
+    .message {
+        max-width: 90%;
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: var(--radius);
+    }
+    
+    .message.sent {
+        border-bottom-right-radius: 2px;
+    }
+    
+    .message.received {
+        border-bottom-left-radius: 2px;
+    }
+    
+    .message .msg-meta {
+        font-size: 10px;
+        gap: 4px;
+    }
+    
+    .chat-input-area {
+        padding: 6px 8px;
+        gap: 4px;
+    }
+    
+    .chat-input-area .input-btn img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    #message-input {
+        font-size: 13px;
+        padding: 6px 10px;
+        min-height: 32px;
+        border-radius: var(--radius);
+    }
+    
+    .send-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .send-btn img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    /* ===== Friends ===== */
+    .friend-card {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    
+    .friend-card img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .friend-card .friend-name {
+        font-size: 13px;
+    }
+    
+    .btn-sm {
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+    
+    .friend-request-card {
+        padding: 8px 10px;
+    }
+    
+    .friend-request-card .request-info img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* ===== Groups ===== */
+    .group-card {
+        padding: 8px 10px;
+    }
+    
+    .group-card img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .group-card .group-name {
+        font-size: 13px;
+    }
+    
+    /* ===== Notifications ===== */
+    .notification-item {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    
+    .notification-item .notif-icon {
+        font-size: 18px;
+    }
+    
+    /* ===== Profile ===== */
+    .profile-content {
+        padding: 12px;
+    }
+    
+    .profile-avatar-section {
+        padding: 12px;
+    }
+    
+    .profile-avatar-section img {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .profile-avatar-section h2 {
+        font-size: 18px;
+    }
+    
+    .profile-info-item label {
+        font-size: 11px;
+    }
+    
+    .profile-info-item p {
+        font-size: 14px;
+    }
+    
+    /* ===== Settings ===== */
+    .settings-section {
+        padding: 12px;
+    }
+    
+    .settings-section h3 {
+        font-size: 15px;
+    }
+    
+    .settings-item {
+        padding: 8px 0;
+    }
+    
+    /* ===== Modal ===== */
+    .modal-content {
+        padding: 12px;
+    }
+    
+    .modal-header h3 {
+        font-size: 16px;
+    }
+    
+    #modal-close {
+        font-size: 20px;
+    }
+    
+    /* ===== Emoji Picker ===== */
+    .emoji-picker {
+        max-width: 220px;
+        max-height: 200px;
+        padding: 6px;
+    }
+    
+    .emoji-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2px;
+    }
+    
+    .emoji-grid button {
+        font-size: 18px;
+        padding: 2px;
+    }
+    
+    /* ===== Toast ===== */
+    .toast {
+        font-size: 12px;
+        padding: 8px 16px;
+        max-width: 98%;
+        bottom: 10px;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL PHONES (360px and below)
+   ============================================ */
+@media (max-width: 360px) {
+    .auth-container {
+        padding: 12px;
+        margin: 4px;
+    }
+    
+    .auth-logo img {
+        height: 40px;
+    }
+    
+    .auth-logo h1 {
+        font-size: 16px;
+    }
+    
+    .sidebar {
+        width: 240px;
+        min-width: 240px;
+    }
+    
+    .chat-list-panel {
+        max-height: 140px;
+    }
+    
+    .chat-window-panel {
+        height: calc(100vh - 140px);
+    }
+    
+    .message {
+        max-width: 95%;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    
+    .emoji-picker {
+        max-width: 180px;
+    }
+    
+    .emoji-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .emoji-grid button {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .sidebar,
+    .chat-header-actions,
+    .chat-input-area,
+    .friends-header,
+    .groups-header,
+    .notifications-header,
+    .profile-actions,
+    .settings-header {
+        display: none !important;
+    }
+    
+    .chat-window-panel {
+        height: auto !important;
+        min-height: 100vh;
+    }
+    
+    .message {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid var(--border);
+    }
+}
+
+/* ============================================
+   DARK MODE RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    [data-theme="light"] .chat-list-panel {
+        border-right-color: var(--border);
+    }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   LANDSCAPE MODE FOR MOBILES
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+    .auth-container {
+        padding: 16px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .auth-logo {
+        margin-bottom: 12px;
+    }
+    
+    .auth-logo img {
+        height: 32px;
+    }
+    
+    .auth-logo h1 {
+        font-size: 16px;
+    }
+    
+    .auth-logo p {
+        font-size: 12px;
+    }
+    
+    .auth-form {
+        gap: 8px;
+    }
+    
+    .form-group {
+        gap: 2px;
+    }
+    
+    .form-group input {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    
+    .chat-list-panel {
+        max-height: 100px;
+    }
+    
+    .chat-list {
+        max-height: 70px;
+    }
+    
+    .chat-window-panel {
+        height: calc(100vh - 100px);
+    }
+    
+    .chat-messages {
+        padding: 6px 10px;
+    }
+    
+    .message {
+        max-width: 75%;
+        padding: 4px 10px;
+        font-size: 13px;
+    }
+    
+    .chat-input-area {
+        padding: 4px 8px;
+    }
+    
+    #message-input {
+        min-height: 28px;
+        font-size: 13px;
+    }
+    
+    .send-btn {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .send-btn img {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* ============================================
+   HIGH DPI SCREENS
+   ============================================ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .sidebar-avatar img,
+    .chat-avatar,
+    .friend-card img,
+    .group-card img,
+    .profile-avatar-section img {
+        image-rendering: auto;
+    }
+}

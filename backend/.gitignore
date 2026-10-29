@@ -1,0 +1,445 @@
+# ============================
+# Python / Flask
+# ============================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-wheel-metadata/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.pytest_cache/
+test-reports/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ============================
+# Flask / Web Application
+# ============================
+
+# Flask instance
+instance/
+webapp/
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Flask session
+flask_session/
+
+# ============================
+# Database
+# ============================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# MySQL / MariaDB
+*.sql
+*.dump
+
+# PostgreSQL
+*.pgdump
+
+# Alembic / Flask-Migrate
+migrations/versions/*.py
+!migrations/versions/__init__.py
+migrations/README
+
+# ============================
+# Uploads / Media Files
+# ============================
+
+# File uploads
+uploads/
+media/
+static/uploads/
+static/media/
+*.enc
+*.encrypted
+
+# Voice notes
+voice_notes/
+*.webm
+*.ogg
+*.mp3
+*.wav
+*.m4a
+*.aac
+
+# Status images
+status/*.enc
+status/*.jpg
+status/*.png
+
+# ============================
+# Logs
+# ============================
+
+# Log files
+logs/
+*.log
+*.log.*
+access.log
+error.log
+app.log
+
+# ============================
+# Environment / Secrets
+# ============================
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+secrets.env
+secrets.yaml
+
+# Keys / Certificates
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.p8
+*.der
+private/
+certificates/
+
+# JWT / VAPID keys
+*.jwk
+*.jwt
+vapid_private.pem
+vapid_public.pem
+
+# ============================
+# IDE / Editor
+# ============================
+
+# VSCode
+.vscode/
+.vscode/**
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+.idea_modules/
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+*.vim
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+# ============================
+# OS / System
+# ============================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# ============================
+# Docker
+# ============================
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+Dockerfile.*
+*.dockerfile
+
+# ============================
+# Node.js / Frontend (if applicable)
+# ============================
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+
+# ============================
+# Testing
+# ============================
+
+# Test artifacts
+test.db
+test.sqlite
+*.test.db
+*.coverage
+
+# Pytest
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+benchmarks/
+
+# ============================
+# Project Specific
+# ============================
+
+# Local configuration
+local_config.py
+local_settings.py
+config.local.py
+
+# Secret files
+secrets.py
+credentials.py
+*.secret
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ============================
+# Deployment
+# ============================
+
+# Deployment artifacts
+deploy/
+*.deploy
+*.tar.gz
+*.zip
+
+# Heroku
+Procfile
+.heroku/
+heroku.yml
+
+# AWS
+.elasticbeanstalk/
+.aws/
+
+# GCP
+.gcloud/
+.google/
+service-account.json
+
+# ============================
+# Documentation
+# ============================
+
+# Generated docs
+docs/_build/
+docs/build/
+site/
+*.epub
+*.pdf
+*.mobi
+
+# ============================
+# Misc
+# ============================
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+celeryd.pid
+
+# Sphinx
+docs/_build/
+
+# Profiling
+*.prof
+*.gcda
+*.gcno
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# ============================
+# Security Sensitive Files
+# ============================
+
+# Never commit these!
+*.private
+*.secret
+*.keyring
+*.keychain
+*.pgp
+*.gpg
+*.asc
+*.ssh
+*id_rsa*
+*id_ed25519*
+known_hosts
+authorized_keys
+
+# ============================
+# Application specific
+# ============================
+
+# Session files
+sessions/
+*.session
+*.pickle
+
+# Cache files
+.cache/
+*.cache
+cache/
+
+# Temp files from encryption
+*.tmp.enc
+*.tmp.dec
+
+# SSL certificates (keep in .env only)
+cert.pem
+key.pem
+fullchain.pem
+privkey.pem
+
+# ============================
+# Additions for Secure Chat App
+# ============================
+
+# Backup of encrypted private keys (never commit)
+*.encrypted_private_key
+*.wrapped_key
+
+# Message encryption temp files
+*.msg.enc
+*.msg.dec
+
+# Voice call recordings
+call_recordings/
+*.call.rec
+
+# Screenshots / Debug dumps
+screenshots/
+debug/
+*.dump
